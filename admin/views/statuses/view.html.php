@@ -14,6 +14,7 @@ use Joomla\CMS\MVC\View\HtmlView;
 use Joomla\CMS\Toolbar\ToolbarHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Helper\ContentHelper;
 
 class JtraxViewStatuses extends HtmlView
 {
@@ -25,6 +26,7 @@ class JtraxViewStatuses extends HtmlView
 
     public function display($tpl = null)
     {
+		$this->canDo		 = ContentHelper::getActions('com_jtrax');
 		$this->items		 = $this->get('Items');
 		$this->pagination	 = $this->get('Pagination');
 		$this->state		 = $this->get('State');
@@ -50,7 +52,9 @@ class JtraxViewStatuses extends HtmlView
         ToolbarHelper::publish('statuses.publish', 'JTOOLBAR_PUBLISH', true);
         ToolbarHelper::unpublish('statuses.unpublish', 'JTOOLBAR_UNPUBLISH', true);
         ToolbarHelper::deleteList(Text::_('COM_JTRAX_DELETE_QUESTION'), 'statuses.delete', 'JTOOLBAR_DELETE');
-        
-        ToolbarHelper::preferences('com_jtrax');
+        if ($this->canDo->get('core.admin'))
+		{
+			ToolbarHelper::preferences('com_jtrax');
+		}
     }
 }
