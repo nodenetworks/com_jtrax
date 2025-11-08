@@ -7,7 +7,7 @@
 	<authorUrl>www.nodenetworks.net</authorUrl>
 	<copyright>Michał Ostrykiewicz - All rights reserved</copyright>
 	<license>GNU General Public License v2</license>
-	<version>2.0.1</version>
+	<version>2.0.2</version>
 	<description>COM_JTRAX_DESCRIPTION</description>
 	<update> 
 		<schemas>
@@ -31,6 +31,8 @@
 		<filename>index.html</filename>
 		<filename>jtrax.php</filename>
 		<filename>controller.php</filename>
+		<filename>com_jtrax.xml</filename>
+		<filename>config.xml</filename>
 		<folder>views</folder>
 		<folder>models</folder>
 	</files>	
@@ -60,7 +62,7 @@
 				COM_JTRAX_MENU_CODES
 			</menu>
 			<menu
-				link="option=com_jtrax&amp;view=statuses"
+				link="option=com_jtrax&amp;view=statuses" access="core.manage" section="statuses"
 				>
 				COM_JTRAX_MENU_STATUSES
 			</menu>
@@ -81,6 +83,7 @@
 			<filename>jtrax.php</filename>
 			<filename>controller.php</filename>
 			<filename>config.xml</filename>
+			<filename>access.xml</filename>
 			<folder>sql</folder>
 			<folder>models</folder>
 			<folder>assets</folder>

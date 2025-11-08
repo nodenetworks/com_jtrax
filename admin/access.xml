@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~
+  ~ @package   jtrax
+  ~ @copyright Copyright (c)2025 Michał Ostrykiewicz
+  ~ @license   GNU General Public License version 2, or later
+  -->
+<access component="com_jtrax">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" />
+		<action name="core.manage" title="JACTION_MANAGE" />
+		<action name="jtrax.configure" title="COM_JTRAX_ACCESS_CONFIGURE_LBL" description="COM_JTRAX_ACCESS_CONFIGURE_DESC" />
+		<action name="jtrax.statuses" title="COM_JTRAX_STATUS_ACCESS_LBL" description="COM_JTRAX_STATUS_ACCESS_DESC" />
+		<action name="core.create" title="COM_JTRAX_ACCESS_CREATE_LBL" description="COM_JTRAX_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="COM_JTRAX_ACCESS_DELETE_LBL" description="COM_JTRAX_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="COM_JTRAX_ACCESS_EDIT_LBL" description="COM_JTRAX_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="COM_JTRAX_ACCESS_EDITSTATE_LBL" description="COM_JTRAX_ACCESS_EDITSTATE_DESC" />
+	</section>
+    <section name="statuses" title="COM_JTRAX_STATUSES" />
+</access>

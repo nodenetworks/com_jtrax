@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_jtrax</name>
+    <author>Michał Ostrykiewicz</author>
+    <creationDate>2025-09-29</creationDate>
+    <version>1.0.0</version>
+    <description>JTrax Component for Joomla 4+</description>
+    <files>
+        <folder>src</folder>
+        <folder>services</folder>
+        <filename>jtrax.php</filename>
+    </files>
+    <services>
+        <service type="component" name="com_jtrax">services/provider.php</service>
+    </services>
+    <access>
+        <section name="component" title="COM_JTRAX" />
+    </access>
+    <config>config.xml</config>
+</extension>
