@@ -96,9 +96,9 @@ if (!empty($this->statuses) && is_array($this->statuses)) {
                         $formattedDate = isset($date[2], $date[1], $date[0]) ? $date[2] . '/' . $date[1] . '/' . $date[0] : $el->datetime;
                     ?>
                     <td><?php echo $formattedDate; ?></td>
-                    <td><?php echo htmlspecialchars($statusMap[(int) $el->status_id] ?? ($el->status ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php echo htmlspecialchars($statusMap[(int) $el->status_id] ?? ($el->details ?? $el->status ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
                     <?php if (!empty($this->showDetails)): ?>
-                        <td><?php echo htmlspecialchars($el->status ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td><?php echo htmlspecialchars($el->details ?? $el->status ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
                     <?php endif; ?>
                     <?php if ($params->get('enable_notes', 1)): ?>
                         <td><?php echo nl2br(htmlspecialchars($el->notes ?? '', ENT_QUOTES, 'UTF-8')); ?></td>
